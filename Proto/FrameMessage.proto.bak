@@ -1,0 +1,64 @@
+syntax = "proto3";
+package ETModel;
+
+message OneFrameMessage // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 Op = 1;
+	bytes AMessage = 2;
+}
+
+message FrameMessage // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+
+	int32 Frame = 1;
+	repeated OneFrameMessage Message = 2;
+}
+
+message FSPParam // IMessage
+{
+	string host = 1;
+	int32 port = 2;
+	uint32 sid = 3;
+	int32 serverFrameInterval = 4;
+	int32 serverTimeout = 5;
+	int32 clientFrameRateMultiple = 6;
+	bool enableSpeedUp = 7;
+	int32 defaultSpeed = 8;
+	int32 frameBufferSize = 9;
+	bool enableAutoBuffer = 10;
+	int32 maxFrameId = 11;
+	bool useLocal = 12;
+	int32 authId = 13;
+}
+
+message FSPVKey // IMessage
+{
+	int32 vkey = 1;
+	repeated int32 args = 2;
+	uint32 playerId = 3;
+}
+
+message FSPDataC2S // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	uint32 sid = 1;
+	repeated FSPVKey vkeys = 2;
+}
+
+message FSPDataS2C // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	repeated FSPFrame frames = 1;
+}
+
+message FSPFrame // IMessage
+{
+	int32 frameId = 1;
+	repeated FSPVKey vkeys = 2;
+}

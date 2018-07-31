@@ -1,0 +1,7 @@
+D:\work\ET-master\Unity\Hotfix\obj\Debug\Unity.Hotfix.csprojAssemblyReference.cache
+D:\work\ET-master\Unity\Hotfix\obj\Debug\Unity.Hotfix.csproj.CoreCompileInputs.cache
+D:\work\ET-master\Unity\Temp\UnityVS_bin\Debug\Hotfix.dll
+D:\work\ET-master\Unity\Temp\UnityVS_bin\Debug\Hotfix.pdb
+D:\work\ET-master\Unity\Hotfix\obj\Debug\Unity.Hotfix.csproj.CopyComplete
+D:\work\ET-master\Unity\Hotfix\obj\Debug\Hotfix.dll
+D:\work\ET-master\Unity\Hotfix\obj\Debug\Hotfix.pdb
